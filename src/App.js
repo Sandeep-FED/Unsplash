@@ -1,9 +1,10 @@
 import React from "react"
+import Getimages from "./components/Getimages"
 
 function App() {
   return (
     <div className="App">
-      <h1>Unsplash - Image Gallery</h1>
+      <Getimages />
     </div>
   )
 }
