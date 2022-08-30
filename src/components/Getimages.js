@@ -27,7 +27,7 @@ function Getimages() {
           <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl my-10 lg:mt-20 lg:mb-16 text-slate-800 capitalize">
             personalized for you
           </h1>
-          <div>
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {images.map((image) => (
               <Image {...image} key={image.id} />
             ))}
