@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Image from "./Image"
 
 function Getimages() {
   const [images, setimages] = useState([])
@@ -18,14 +19,18 @@ function Getimages() {
   return (
     <>
       {!images ? (
-        <h1>Loading... </h1>
+        <h1 className="flex text-center justify-center h-screen font-bold text-4xl items-center text-slate-800">
+          Loading...
+        </h1>
       ) : (
-        <section>
-          <h1>New collections!!!</h1>
+        <section className="px-5 container mx-auto">
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl my-10 lg:mt-20 lg:mb-16 text-slate-800 capitalize">
+            personalized for you
+          </h1>
           <div>
-            {images.map((image, index) => {
-              ;<Image key={image.id} {...image} />
-            })}
+            {images.map((image) => (
+              <Image {...image} key={image.id} />
+            ))}
           </div>
         </section>
       )}
